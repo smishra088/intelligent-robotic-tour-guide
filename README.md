@@ -38,7 +38,7 @@ def get_gpt_response(prompt):
 
 
 
-
+```
 
 ### Navigation Module (ROS + Dynamic Path Planning) – Intelligent Robotic Tour Guide  
 **Implemented by: Aishwarya Das**
