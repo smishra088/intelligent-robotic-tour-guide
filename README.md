@@ -1,25 +1,48 @@
 ## NLP & Voice Command Modules  
 **Implemented and Tested by: Sweta Mishra**  
 
-These modules enable natural user interaction with the museum robot system through voice and text input, combining Google Speech-to-Text and OpenAI GPT-4 for intelligent dialog.
+These modules enable natural interaction with the museum robot system through both voice and text input. The components work together to process user queries using speech recognition, GPT-4-based natural language understanding, and user preference extraction. All features align with the capabilities outlined in the project proposal.
 
-### 1. voice_input_test.py  
-Tests the speech recognition module using Google Cloud STT. Users speak museum-related commands, which are transcribed and printed in the terminal. Used to validate voice input accuracy in a simulated environment.
+---
 
-- Voice queries tested:
-  - Take me to the sculpture gallery
-  - I want to see modern art and skip crowded sections
-  - Show me something peaceful and quiet
-  - Take me on a quick tour that avoids all the busy areas
-  - Are there any interactive exhibits for kids?
+### 1. `voice_input_test.py`  
+Tests the voice recognition pipeline using user speech commands. Transcribes input and validates voice interaction flow.
 
-### 2. nlp_test.py  
-Tests GPT-4 responses to typed museum commands. Uses real OpenAI API to simulate the robot’s intelligent response capability.
+**Voice Queries Tested:**
+- Take me to the sculpture gallery  
+- I want to see modern art and skip crowded sections  
+- Show me something peaceful and quiet  
+- Are there any interactive exhibits for kids?
 
-- Queries tested:
-  - Give me a short tour focused on modern art only
-  - Can you take me to a sculpture gallery that’s not too crowded?
-  - I want to avoid noisy areas and see digital installations
+---
+
+### 2. `nlp_test.py`  
+Verifies GPT-4’s ability to handle and respond to typed natural language queries related to the museum setting.
+
+**Typed Queries Tested:**
+- Can you take me to a sculpture gallery that’s not too crowded?  
+- Give me a short tour focused on modern art  
+- I want to avoid noisy areas and see digital installations
+
+---
+
+### 3. `preference_test.py`  
+Implements rule-based extraction of user preferences from spoken or typed input. This module detects themes like interest in modern art, sculpture, crowd avoidance, and more.
+
+**Example Preferences Extracted:**
+- Avoid Crowds  
+- Visit Modern Art Section  
+- Visit Sculpture Gallery  
+- Visit Painting Section
+
+---
+
+### 4. `voice_dialog_interface.py`  
+Integrates voice input, GPT-4 response generation, and real-time preference extraction in a complete user interface. The system captures user voice, generates personalized responses, and extracts intent in a structured form.
+
+---
+
+These components provide robust support for natural language understanding and personalization based on user commands, as described in the original proposal.
 
 
 ```
