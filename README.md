@@ -41,6 +41,11 @@ Implements rule-based extraction of user preferences from spoken or typed input.
 Integrates voice input, GPT-4 response generation, and real-time preference extraction in a complete user interface. The system captures user voice, generates personalized responses, and extracts intent in a structured form.
 
 ---
+### 5. `anomaly_module`  
+Implements real-time detection of crowds and obstacles using YOLOv8, enhancing the robot’s awareness of its environment. The module processes visual input from the camera and flags anomalies to support safe interaction in the museum space. 
+
+---
+
 
 These components provide robust support for natural language understanding and personalization based on user commands, as described in the original proposal.
 
