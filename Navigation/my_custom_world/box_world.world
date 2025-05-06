@@ -1,0 +1,97 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="box_world">
+    <include>
+      <uri>model://ground_plane</uri>
+    </include>
+    <include>
+      <uri>model://sun</uri>
+    </include>
+
+    <physics type="ode">
+      <max_step_size>0.02</max_step_size>
+      <real_time_update_rate>100</real_time_update_rate>
+    </physics>
+
+    <model name="open_box">
+      <pose>2 2 0 0 0 0</pose>
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box><size>1 1 1</size></box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box><size>1 1 1</size></box>
+          </geometry>
+        </visual>
+      </link>
+    </model>
+  </world>
+</sdf>
+
+<!-- Perimeter Walls (10x0.1x1) forming a square -->
+<model name="wall_front">
+  <pose>0 5 0.5 0 0 0</pose>
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <box><size>10 0.1 1</size></box>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <box><size>10 0.1 1</size></box>
+      </geometry>
+    </visual>
+  </link>
+</model>
+
+<model name="wall_back">
+  <pose>0 -5 0.5 0 0 0</pose>
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <box><size>10 0.1 1</size></box>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <box><size>10 0.1 1</size></box>
+      </geometry>
+    </visual>
+  </link>
+</model>
+
+<model name="wall_left">
+  <pose>-5 0 0.5 0 0 0</pose>
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <box><size>0.1 10 1</size></box>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <box><size>0.1 10 1</size></box>
+      </geometry>
+    </visual>
+  </link>
+</model>
+
+<model name="wall_right">
+  <pose>5 0 0.5 0 0 0</pose>
+  <link name="link">
+    <collision name="collision">
+      <geometry>
+        <box><size>0.1 10 1</size></box>
+      </geometry>
+    </collision>
+    <visual name="visual">
+      <geometry>
+        <box><size>0.1 10 1</size></box>
+      </geometry>
+    </visual>
+  </link>
+</model>
